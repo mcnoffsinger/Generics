@@ -5,6 +5,8 @@ import java.util.ArrayList;
  * 
  * Write a generic method that returns a new ArrayList.
  * The new list contains the nonduplicate elements from the original list.
+ *
+ * @author Maxwell Noffsinger
  */
 public class Exercise19_03 {
     
@@ -21,8 +23,22 @@ public class Exercise19_03 {
      */
     public static <E> ArrayList<E> removeDuplicates(ArrayList<E> list) {
         // TODO: Implement this method
-        System.out.println("TODO: removeDuplicates() not implemented yet");
-        return null;
+        ArrayList<E> newList = new ArrayList<>();
+        Boolean unique;
+        for (E item : list){
+            unique = true;
+            for (E jtem : newList){
+                if (item.equals(jtem)){
+                    unique = false;
+                }
+                
+            }
+            if (unique == true){
+                newList.add(item);
+            }
+        }
+        //System.out.println("TODO: removeDuplicates() not implemented yet");
+        return newList;
     }
 
     public static void main(String[] args) {
