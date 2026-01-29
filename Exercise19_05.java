@@ -7,6 +7,8 @@
  * 
  * Write a test program that prompts the user to enter 10 integers,
  * invokes this method to find the max, and displays the maximum number.
+ *
+ * @author Maxwell Noffsinger
  */
 public class Exercise19_05 {
     
@@ -23,8 +25,14 @@ public class Exercise19_05 {
      */
     public static <E extends Comparable<E>> E max(E[] list) {
         // TODO: Implement this method
-        System.out.println("TODO: max() not implemented yet");
-        return null;
+        E maxValue = list[0];
+        for (E value : list){
+            if (value.compareTo(maxValue)> 0){
+                maxValue = value;
+            }
+        }
+        //System.out.println("TODO: max() not implemented yet");
+        return maxValue;
     }
 
     public static void main(String[] args) {
