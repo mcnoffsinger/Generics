@@ -6,6 +6,8 @@ import java.util.ArrayList;
  * Write the following method that returns the largest element in an ArrayList:
  * 
  * public static <E extends Comparable<E>> E max(ArrayList<E> list)
+ *
+ *@author Maxwell Noffsinger
  */
 public class Exercise19_06 {
     
